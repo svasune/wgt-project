@@ -1,0 +1,23 @@
+<mat-grid-list cols="3" rowHeight="500px">
+  <mat-grid-tile *ngFor="let recipe of recipes">
+    <mat-card align="center" class="recipe-card">
+      <mat-card-header>
+        <mat-card-title align="center">{{recipe.title}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{ recipe.src }}" alt="Photo of a {{ recipe.title }}">
+      <mat-card-content>
+        <p>
+          {{ recipe.description }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <!-- <button mat-button><span class="material-icons">
+        favorite_border
+        <!-- padaryti, kad onclick pasikeicia sirdute, tampa pilnavidure -->
+        <!-- </span></button> -->
+        <button mat-button>full recipe</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+<router-outlet></router-outlet>

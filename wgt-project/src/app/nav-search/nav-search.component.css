@@ -1,0 +1,108 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: rgba(19, 17, 17, 0.713);
+  color: var(--main-text);
+}
+
+.nav-section {
+  list-style: none;
+}
+
+ul,
+a {
+  text-decoration: none;
+  color: var(--main-text);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+#logo a {
+  color: var(--main-navlogo);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul li {
+  padding: 20px;
+  margin: 20px;
+}
+
+.nav-li:hover {
+  transform: scale(1.1);
+  transition: 0.7s;
+}
+
+.nav-li {
+  cursor: pointer;
+}
+
+/* 
+fix responsive styles */
+
+@media screen and (max-width: 800px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: fit-content;
+    width: 100%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+}
+
+.search-form {
+  width: 300px;
+  display: flex;
+  position: relative;
+}
+
+/* Ask if this styling is necessary in Angular */
+.search-input {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-input,
+.search-button {
+  height: 30px;
+  border: 3px solid white;
+  color: var(--main-text);
+  background-color: rgba(19, 17, 17, 0.713);
+  ;
+  font-family: Roboto;
+
+  /* issiaiskinti, ka tiksliai daro */
+}
+
+.search-button {
+  margin-left: -2px;
+  border-radius: 0 5px 5px 0;
+}
