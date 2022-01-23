@@ -1,0 +1,22 @@
+.nav-search {
+  width: 150px;
+  display: flex;
+  position: relative;
+}
+
+/* prideti stiliu, kad kampai butu apvalus */
+
+.search-input,
+.search-button {
+  height: 30px;
+  border: 3px solid white;
+  color: var(--main-text);
+  background-color: rgba(19, 17, 17);
+  ;
+  /* issiaiskinti, ka tiksliai daro */
+}
+
+.search-button {
+  margin-left: -2px;
+  border-radius: 0 5px 5px 0;
+}
