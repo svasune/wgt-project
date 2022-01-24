@@ -3,12 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AllRecipesComponent } from '../components/all-recipes/all-recipes.component';
 import { MakeItYourselfComponent } from '../components/make-it-yourself/make-it-yourself.component';
+import { RecipeListComponent } from '../components/recipe-list/recipe-list.component';
 
 const routes: Routes = [
-  { path: '', component: AllRecipesComponent },
+  { path: '', redirectTo: 'recipe', pathMatch: 'full' },
+  {
+    path: 'recipe',
+    component: AllRecipesComponent,
+  },
   {
     path: 'recipe/:id',
-    component: AllRecipesComponent,
+    component: RecipeListComponent,
   },
   {
     path: 'all-recipes-component',
@@ -18,7 +23,15 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot([
+      { path: '', component: AllRecipesComponent },
+      { path: 'recipe/:id', component: RecipeListComponent },
+      { path: 'recipe', component: AllRecipesComponent },
+      { path: 'make-it-yourself', component: MakeItYourselfComponent },
+    ]),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

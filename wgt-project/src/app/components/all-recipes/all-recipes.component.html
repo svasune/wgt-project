@@ -16,7 +16,8 @@
             favorite_border
             <!-- padaryti, kad onclick pasikeicia sirdute, tampa pilnavidure -->
           </span></button>
-        <button mat-button routerLink="['recipe', recipe.id]" routerLinkActive="active">full recipe</button>
+        <button mat-button routerLink="/recipe/{{ recipe.id }}" routerLinkActive="active">full
+          recipe</button>
       </mat-card-actions>
     </mat-card>
   </div>
