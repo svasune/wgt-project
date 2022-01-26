@@ -13,11 +13,12 @@ import { AppRoutingModule } from './routes/app-routing.module';
 import { AppComponent } from './app.component';
 import { AllRecipesComponent } from './components/all-recipes/all-recipes.component';
 import { MakeItYourselfComponent } from './components/make-it-yourself/make-it-yourself.component';
+import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
 import { NavSearchComponent } from './components/nav-search/nav-search.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +31,13 @@ import { RecipeListComponent } from './components/recipe-list/recipe-list.compon
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatCardModule,
     MatGridListModule,
     MatButtonModule,
-    HttpClientModule,
     FormsModule,
     MatTableModule,
   ],

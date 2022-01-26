@@ -29,8 +29,10 @@ const routes: Routes = [
       { path: '', component: AllRecipesComponent },
       { path: 'recipe/:id', component: RecipeListComponent },
       { path: 'recipe', component: AllRecipesComponent },
+      { path: 'all-recipes', component: AllRecipesComponent },
       { path: 'make-it-yourself', component: MakeItYourselfComponent },
     ]),
+    [RouterModule.forRoot(routes)],
   ],
   exports: [RouterModule],
 })

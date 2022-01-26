@@ -4,5 +4,3 @@ export interface Recipe {
   id?: number;
   description?: string;
 }
-// add cooking time
-// add rating
