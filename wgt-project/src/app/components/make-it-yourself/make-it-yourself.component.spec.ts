@@ -8,9 +8,8 @@ describe('MakeItYourselfComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MakeItYourselfComponent ]
-    })
-    .compileComponents();
+      declarations: [MakeItYourselfComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

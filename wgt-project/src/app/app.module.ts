@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,7 +18,6 @@ import { RecipeListComponent } from './components/recipe-list/recipe-list.compon
 import { NavSearchComponent } from './components/nav-search/nav-search.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
-import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({

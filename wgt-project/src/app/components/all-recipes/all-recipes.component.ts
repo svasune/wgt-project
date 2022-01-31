@@ -1,7 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Recipe } from 'src/app/shared/recipe';
 import { ApiService } from 'src/app/services/api.service';
+import { Recipie } from 'src/app/shared/recipie';
 
 @Component({
   selector: 'app-all-recipes',
@@ -9,8 +8,7 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./all-recipes.component.css'],
 })
 export class AllRecipesComponent implements OnInit {
-  recipes: Recipe[] = [];
-
+  recipies: Recipie[] = [];
   constructor(private api: ApiService) {}
 
   ngOnInit(): void {
@@ -18,8 +16,8 @@ export class AllRecipesComponent implements OnInit {
   }
 
   loadData = () => {
-    this.api.get('/api/Recipie/all').subscribe(({ recipes }: any): void => {
-      this.recipes = recipes;
+    this.api.get('/all').subscribe(({ recipies }: any): void => {
+      this.recipies = recipies;
     });
   };
 }

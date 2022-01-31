@@ -27,8 +27,8 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: AllRecipesComponent },
-      { path: 'recipe/:id', component: RecipeListComponent },
-      { path: 'recipe', component: AllRecipesComponent },
+      { path: 'recipie/:id', component: RecipeListComponent },
+      { path: 'recipie', component: AllRecipesComponent },
       { path: 'all-recipes', component: AllRecipesComponent },
       { path: 'make-it-yourself', component: MakeItYourselfComponent },
     ]),
