@@ -8,32 +8,32 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class ApiService {
-  private apiUrl = environment;
+  private apiUrl = 'http://localhost:5000/Recipie/';
 
   constructor(private http: HttpClient) {}
 
-  get(url: string) {
-    return this.http.get(this.apiUrl + url, this.getRequestOptions());
+  get(): Observable<Recipie[]> {
+    return this.http.get<Recipie[]>(`${this.apiUrl}/all`);
   }
 
-  post(url: string, data: object) {
-    return this.http.post(this.apiUrl + url, data, this.getRequestOptions());
+  post(recipie: Recipie): Observable<Recipie> {
+    return this.http.post<Recipie>(`${this.apiUrl}/1`, recipie);
   }
 
-  put(url: string, data: object) {
-    return this.http.put(this.apiUrl + url, data, this.getRequestOptions());
-  }
+  // put(url: string, data: object) {
+  //   return this.http.put(this.apiUrl + url, data, this.getRequestOptions());
+  // }
 
-  delete(url: string) {
-    return this.http.delete(`${this.apiUrl}${url}`, this.getRequestOptions());
-  }
+  // delete(url: string) {
+  //   return this.http.delete(`${this.apiUrl}${url}`, this.getRequestOptions());
+  // }
 
-  private getRequestOptions() {
-    const token = sessionStorage.getItem('access_token');
-    const headers: { [key: string]: string } = {
-      'Content-Type': 'application/json',
-      Authorization: token ? `Bearer ${token}` : '',
-    };
-    return { headers };
-  }
+  // private getRequestOptions() {
+  //   const token = sessionStorage.getItem('access_token');
+  //   const headers: { [key: string]: string } = {
+  //     'Content-Type': 'application/json',
+  //     Authorization: token ? `Bearer ${token}` : '',
+  //   };
+  //   return { headers };
+  // }
 }

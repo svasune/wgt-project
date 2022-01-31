@@ -1,10 +1,3 @@
-// export interface Recipie {
-//   id: number;
-//   title: string;
-//   src: string;
-//   description: string;
-// }
-
 export interface Recipie {
   recipieId?: number;
   name?: string;
@@ -17,5 +10,12 @@ export interface Recipie {
   imageUrl?: string;
   isVegetarian?: boolean;
   isVegan?: boolean;
-  ingredients?: string[];
+  ingredients?: [
+    {
+      ingredientId: number;
+      name: string;
+      quantity: number;
+      unit: string;
+    }
+  ];
 }

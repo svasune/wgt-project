@@ -8,6 +8,26 @@ import { Recipie } from 'src/app/shared/recipie';
   styleUrls: ['./all-recipes.component.css'],
 })
 export class AllRecipesComponent implements OnInit {
+  // private recipie: Recipie = {
+  //   name: 'string',
+  //   timeToCook: {
+  //     hours: 24,
+  //     minutes: 60,
+  //     seconds: 60,
+  //   },
+  //   imageUrl: 'string',
+  //   isVegetarian: true,
+  //   isVegan: true,
+  //   ingredients: [
+  //     {
+  //       ingredientId: 0,
+  //       name: 'string',
+  //       quantity: 0,
+  //       unit: 'string',
+  //     },
+  //   ],
+  // };
+
   recipies: Recipie[] = [];
   constructor(private api: ApiService) {}
 
@@ -16,7 +36,7 @@ export class AllRecipesComponent implements OnInit {
   }
 
   loadData = () => {
-    this.api.get('/all').subscribe(({ recipies }: any): void => {
+    this.api.get().subscribe(({ recipies }: any): void => {
       this.recipies = recipies;
     });
   };

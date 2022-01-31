@@ -106,7 +106,7 @@
 /* SM */
 @media only screen and (max-width: 800px) {
   .navigation {
-    bottom: 0;
+    top: 0;
     width: 100vw;
     height: 5rem;
     flex-direction: row;
