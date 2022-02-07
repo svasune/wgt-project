@@ -1,22 +1,31 @@
+.form {
+  margin: 100px 0 0 280px;
+
+}
+
 .nav-search {
-  width: 150px;
-  display: flex;
+  width: 300px;
   position: relative;
+  display: flex;
+  flex-direction: row;
+
+
 }
 
 /* prideti stiliu, kad kampai butu apvalus */
 
 .search-input,
-.search-button {
+.search-button,
+.material-icons {
   height: 30px;
-  border: 3px solid white;
-  color: var(--main-text);
+  border: 3px solid black;
+  color: var(--main-navbar);
   background-color: rgba(19, 17, 17);
   ;
   /* issiaiskinti, ka tiksliai daro */
 }
 
 .search-button {
-  margin-left: -2px;
   border-radius: 0 5px 5px 0;
+  background-color: rgba(19, 17, 17);
 }

@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AllRecipesComponent } from '../components/all-recipes/all-recipes.component';
 import { MakeItYourselfComponent } from '../components/make-it-yourself/make-it-yourself.component';
 import { RecipeListComponent } from '../components/recipe-list/recipe-list.component';
+import { SearchBarComponent } from '../components/search-bar/search-bar.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'recipe', pathMatch: 'full' },
@@ -12,7 +13,7 @@ const routes: Routes = [
     component: AllRecipesComponent,
   },
   {
-    path: 'recipe/:id',
+    path: 'recipie/:id',
     component: RecipeListComponent,
   },
   {
@@ -31,6 +32,7 @@ const routes: Routes = [
       { path: 'recipie', component: AllRecipesComponent },
       { path: 'all-recipes', component: AllRecipesComponent },
       { path: 'make-it-yourself', component: MakeItYourselfComponent },
+      { path: 'search-bar', component: SearchBarComponent },
     ]),
     [RouterModule.forRoot(routes)],
   ],
