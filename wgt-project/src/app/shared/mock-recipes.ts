@@ -1,46 +1,34 @@
-// import { Recipie } from './recipie';
+import { Recipie } from './recipie';
 
-// export const RECIPIES: Recipie[] = [
-//   {
-//     id: 1,
-//     title: 'Pizza',
-//     src: 'assets/images/pizza.jpg',
-//     description:
-//       'Even a novice cook can master the art of pizza with our simple step-by-step guide. Bellissimo!',
-//   },
-//   {
-//     id: 2,
-//     title: 'Salad',
-//     src: 'assets/images/salad.jpg',
-//     description:
-//       'This is an incredibly good Greek salad recipe, nice and tangy and even better in the summer when you use fresh vegetables!',
-//   },
-//   {
-//     id: 3,
-//     title: 'Amercan pancakes',
-//     src: 'assets/images/pancakes.jpg',
-//     description:
-//       'Easy, American-style, fluffy pancakes are great for feeding a crowd at breakfast or brunch. Top with something sweet like fruit, jam or syrup, or rashers of crispy bacon.',
-//   },
-//   {
-//     id: 4,
-//     title: 'Pizza',
-//     src: 'assets/images/pizza.jpg',
-//     description:
-//       'Even a novice cook can master the art of pizza with our simple step-by-step guide. Bellissimo!',
-//   },
-//   {
-//     id: 5,
-//     title: 'Salad',
-//     src: 'assets/images/salad.jpg',
-//     description:
-//       'This is an incredibly good Greek salad recipe, nice and tangy and even better in the summer when you use fresh vegetables!',
-//   },
-//   {
-//     id: 6,
-//     title: 'Amercan pancakes',
-//     src: 'assets/images/pancakes.jpg',
-//     description:
-//       'Easy, American-style, fluffy pancakes are great for feeding a crowd at breakfast or brunch. Top with something sweet like fruit, jam or syrup, or rashers of crispy bacon.',
-//   },
-// ];
+export const RECIPIES: Recipie[] = [
+  {
+    recipieId: 1000001,
+    name: 'Pizza',
+    imageUrl: 'assets/images/pizza.jpg',
+  },
+  {
+    recipieId: 1000002,
+    name: 'Salad',
+    imageUrl: 'assets/images/salad.jpg',
+  },
+  {
+    recipieId: 1000003,
+    name: 'Amercan pancakes',
+    imageUrl: 'assets/images/pancakes.jpg',
+  },
+  {
+    recipieId: 1000004,
+    name: 'Pizza',
+    imageUrl: 'assets/images/pizza.jpg',
+  },
+  {
+    recipieId: 1000005,
+    name: 'Salad',
+    imageUrl: 'assets/images/salad.jpg',
+  },
+  {
+    recipieId: 1000006,
+    name: 'Amercan pancakes',
+    imageUrl: 'assets/images/pancakes.jpg',
+  },
+];

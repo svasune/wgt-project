@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/services/api.service';
+import { RecipiesApiService } from 'src/app/services/recipies-api.service';
 import { Recipie } from 'src/app/shared/recipie';
 
 @Component({
@@ -9,15 +9,35 @@ import { Recipie } from 'src/app/shared/recipie';
 })
 export class AllRecipesComponent implements OnInit {
   recipies: Recipie[] = [];
-  constructor(private api: ApiService) {}
 
-  ngOnInit() {
-    this.loadData();
+  constructor(private recipiesApiService: RecipiesApiService) {}
+
+  ngOnInit(): void {
+    this.loadRecipes();
   }
 
-  loadData = () => {
-    this.api.get().subscribe(({ recipies }: any): void => {
-      this.recipies = recipies;
-    });
-  };
+  private loadRecipes(): void {
+    this.recipiesApiService
+      .getRecipes()
+      .subscribe((recipes: Recipie[]) => (this.recipies = recipes));
+  }
+
+  // refreshPeople() {
+  //   this.api.getPeopleFromObject().subscribe((data) => {
+  //     this.recipies = data;
+  //   });
+  // }
+  // getPeopleGetAll() {
+  //   this.api.getPeopleGetAll().subscribe((data) => {
+  //     this.recipies = data;
+  //   });
+
+  //   this.loadData();
+  // }
+
+  // loadData = () => {
+  //   this.api.get('/api/recipies').subscribe(({ recipies }: any): void => {
+  //     this.recipies = recipies;
+  //   });
+  // };
 }
