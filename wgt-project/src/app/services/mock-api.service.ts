@@ -6,7 +6,7 @@ import { Observable, of } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class RecipiesApiService {
+export class MockApiService {
   getRecipes(): Observable<Recipie[]> {
     return of(RECIPIES);
   }
