@@ -22,6 +22,8 @@ import { NavSearchComponent } from './components/nav-search/nav-search.component
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 
 import { FormsModule } from '@angular/forms';
+import { ApiService } from './services/api.service';
+import { RecipesApi } from './services/RecipesApi';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,7 @@ import { FormsModule } from '@angular/forms';
     MatListModule,
     MatTabsModule,
   ],
-  providers: [],
+  providers: [ApiService, RecipesApi],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
