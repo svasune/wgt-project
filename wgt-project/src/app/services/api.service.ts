@@ -13,7 +13,6 @@ export class ApiService<T> {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       Accept: 'application/json',
-      'Access-Control-Allow-Origin': '${appUrl}',
     }),
   };
 
@@ -23,6 +22,6 @@ export class ApiService<T> {
 
   getAll<T>(path: string): Observable<T[]> {
     this.httpOptions;
-    return this._http.get<T[]>(`${this.apiUrl}/${path}`);
+    return this._http.get<T[]>(`${this.apiUrl}/${path}`, this.httpOptions);
   }
 }

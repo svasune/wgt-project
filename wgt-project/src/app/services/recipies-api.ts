@@ -8,7 +8,7 @@ import { ApiService } from './api.service';
 @Injectable({
   providedIn: 'root',
 })
-export class RecipesApi {
+export class RecipiesApi {
   readonly hostAddress = environment;
   constructor(private apiService: ApiService<Recipie>) {}
 

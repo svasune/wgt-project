@@ -23,7 +23,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 
 import { FormsModule } from '@angular/forms';
 import { ApiService } from './services/api.service';
-import { RecipesApi } from './services/RecipesApi';
+import { RecipiesApi } from './services/recipies-api';
 
 @NgModule({
   declarations: [
@@ -49,7 +49,7 @@ import { RecipesApi } from './services/RecipesApi';
     MatListModule,
     MatTabsModule,
   ],
-  providers: [ApiService, RecipesApi],
+  providers: [ApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
