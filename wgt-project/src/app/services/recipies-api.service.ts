@@ -23,6 +23,6 @@ export class RecipiesApiService {
     return this.apiService.getOne(`Recipie/recipieId`);
   }
   addToList(): Observable<Recipie> {
-    return this.apiService.post(`Recipie/all` + `recipieId`, {});
+    return this.apiService.post(`Recipie/` + `recipieId`, {});
   }
 }

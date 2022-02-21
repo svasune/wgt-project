@@ -1,39 +1,29 @@
-<div class="recipie-list">
-  <div class="card" *ngFor="let recipie of recipies">
+<!-- <app-all-recipes [recipies]="recipies"></app-all-recipes> -->
 
-    <mat-card align="center" class="recipe-card">
-      <mat-card-header>
-        <mat-card-title align="center">{{ recipie.name }}</mat-card-title>
-        <mat-card-title align="center">{{ recipie.imageUrl }}</mat-card-title>
-      </mat-card-header>
+<div class="recipe-card">
+  <h2>Porridge</h2>
+  <img src="https://images.everydayhealth.com/images/health-benefits-of-oatmeal-1440x810.jpg?sfvrsn=9f201ef_1"
+    alt="Chai Oatmeal" />
+  <div class="recipe-content">
 
-    </mat-card>
-  </div>
+    <h3>Breakfast</h3>
+    <ul class="ul">
+      <li class="li"><span class="icon icon-users"></span><span>1 person</span></li>
+      <li class="li"><span class="icon icon-calories"></span><span>vegetarian</span></li>
+      <li class="li"><span class="icon icon-calories"></span><span>simple</span></li>
+      <li class="li"><span class="icon icon-clock"></span><span>15 min</span></li>
+      <li class="li"><span class="icon icon-calories"></span><span>248 cal</span></li>
 
-  <div class="recipe-card">
-    <h2>Pourage</h2>
-    <img src="https://images.everydayhealth.com/images/health-benefits-of-oatmeal-1440x810.jpg?sfvrsn=9f201ef_1"
-      alt="Chai Oatmeal" />
-    <div class="recipe-content">
+    </ul>
+    <p>There is one thing I buy in jumbo size in my house: it is old fashioned oats!</p>
 
-      <h3>Breakfast</h3>
-      <ul class="ul">
-        <li class="li"><span class="icon icon-users"></span><span>1 person</span></li>
-        <li class="li"><span class="icon icon-calories"></span><span>vegetarian</span></li>
-        <li class="li"><span class="icon icon-calories"></span><span>simple</span></li>
-        <li class="li"><span class="icon icon-clock"></span><span>15 min</span></li>
-        <li class="li"><span class="icon icon-calories"></span><span>248 cal</span></li>
-
-      </ul>
-      <p>There is one thing I buy in jumbo size in my house: it is old fashioned oats!</p>
-
-      <ul class="ingredients">Ingredients:
-        <li>oats</li>
-        <li>cinnamon</li>
-        <li>honey</li>
-        <li>milk</li>
-      </ul>
-
-    </div>
+    <ul class="ingredients">Ingredients:
+      <li>oats</li>
+      <li>cinnamon</li>
+      <li>honey</li>
+      <li>milk</li>
+    </ul>
 
   </div>
+
+</div>

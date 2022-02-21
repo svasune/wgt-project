@@ -31,6 +31,9 @@ export class AllRecipesComponent implements OnInit {
   public changeIcon(newIcon: string) {
     this.icon = newIcon;
   }
+
+  // konvertuoti IS VEGETARIAN į lapelio ikoną.
+
   //** MOCK API **
   // loadRecipies = () => {
   //   this.api.get('/api/recipies').subscribe(({ recipies }: any): void => {

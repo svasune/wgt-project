@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 img {
   width: 30vh;
   height: 30vh;
@@ -21,18 +27,28 @@ img {
   margin-left: 25px;
 }
 
+mat-card-content,
+mat-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+mat-card-actions {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+}
+
+.content {
+  margin: 2px;
+  padding: 2px;
+  font-weight: 500;
+}
+
 @media only screen and (max-width: 800px) {
   .grid {
     flex-direction: column;
     justify-content: space-evenly;
   }
-}
-
-/* BUTTON TOGGLE */
-.green {
-  background-color: none;
-}
-
-.red {
-  background-color: red;
 }

@@ -28,6 +28,8 @@ import { ApiService } from './services/api.service';
 import { RecipiesApiService } from './services/recipies-api.service';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { TimePipe } from './pipes/time.pipe';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { FooterComponent } from './components/footer/footer.component';
     RecipeListComponent,
     SearchBarComponent,
     FooterComponent,
+    HighlightDirective,
+    TimePipe,
   ],
   imports: [
     BrowserModule,

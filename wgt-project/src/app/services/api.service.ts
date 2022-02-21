@@ -27,8 +27,8 @@ export class ApiService<T> {
   put(path: string, t: T): Observable<T> {
     return this.http.put<T>(`${this.hostAddress}/${path}`, t);
   }
-  post(id: string, data: object): Observable<T> {
-    return this.http.post<T>(`${this.hostAddress}/${id}`, data);
+  post(path: any, data: object): Observable<T> {
+    return this.http.post<T>(`${this.hostAddress}/${path}`, data);
   }
   delete(path: string) {
     return this.http.delete<T>(`${this.hostAddress}/${path}`);
