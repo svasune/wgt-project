@@ -5,15 +5,14 @@ import { AllRecipesComponent } from '../components/all-recipes/all-recipes.compo
 import { MakeItYourselfComponent } from '../components/make-it-yourself/make-it-yourself.component';
 import { RecipeListComponent } from '../components/recipe-list/recipe-list.component';
 import { SearchBarComponent } from '../components/search-bar/search-bar.component';
-
 const routes: Routes = [
   { path: '', redirectTo: 'recipe', pathMatch: 'full' },
   {
-    path: 'recipe',
+    path: 'recipie',
     component: AllRecipesComponent,
   },
   {
-    path: 'recipie/:id',
+    path: 'recipie/:recipieId',
     component: RecipeListComponent,
   },
   {
@@ -21,6 +20,10 @@ const routes: Routes = [
     component: AllRecipesComponent,
   },
   { path: 'make-it-yourself-component', component: MakeItYourselfComponent },
+  {
+    path: 'search-bar-component',
+    component: SearchBarComponent,
+  },
 ];
 
 @NgModule({
@@ -28,7 +31,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: AllRecipesComponent },
-      { path: 'recipie/:id', component: RecipeListComponent },
+      { path: 'recipie/:recipieId', component: RecipeListComponent },
       { path: 'recipie', component: AllRecipesComponent },
       { path: 'all-recipes', component: AllRecipesComponent },
       { path: 'make-it-yourself', component: MakeItYourselfComponent },

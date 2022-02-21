@@ -9,10 +9,20 @@ import { ApiService } from './api.service';
   providedIn: 'root',
 })
 export class RecipiesApiService {
-  //hostAddress = `${environment.hostAddress}`;
+  getRecipes():
+    | Observable<import('../types/types').Recipe[]>
+    | Promise<import('../types/types').Recipe[]> {
+    throw new Error('Method not implemented.');
+  }
   constructor(private apiService: ApiService<Recipie>) {}
 
   getAllRecipies(): Observable<Recipie[]> {
     return this.apiService.getAll(`Recipie/all`);
+  }
+  getRecipie(): Observable<Recipie> {
+    return this.apiService.getOne(`Recipie/recipieId`);
+  }
+  addToList(): Observable<Recipie> {
+    return this.apiService.post(`Recipie/all` + `recipieId`, {});
   }
 }

@@ -2,11 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { Recipie } from 'src/app/shared/recipie';
 import { Observable, Observer } from 'rxjs';
-
-export interface ExampleTab {
-  label: string;
-  content: string;
-}
+import { RecipiesApiService } from 'src/app/services/recipies-api.service';
+import { AppRoutingModule } from 'src/app/routes/app-routing.module';
 
 @Component({
   selector: 'app-recipe-list',
@@ -14,7 +11,19 @@ export interface ExampleTab {
   styleUrls: ['./recipe-list.component.css'],
 })
 export class RecipeListComponent implements OnInit {
-  constructor() {}
+  recipies: Recipie[] = [];
 
-  ngOnInit(): void {}
+  constructor(
+    private recipiesApiService: RecipiesApiService,
+    public appRoutingModule: AppRoutingModule
+  ) {}
+
+  ngOnInit(): void {
+    this.addToFavorites();
+  }
+  addToFavorites() {
+    this.recipiesApiService.addToList().subscribe(({ recipies }: any): void => {
+      this.recipies = recipies;
+    });
+  }
 }

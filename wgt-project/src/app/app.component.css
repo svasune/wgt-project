@@ -1,3 +1,6 @@
-app-nav-search {
-  position: absolute;
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

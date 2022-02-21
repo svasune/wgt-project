@@ -1,31 +1,40 @@
-.form {
-  margin: 100px 0 0 280px;
-
-}
-
-.nav-search {
-  width: 300px;
-  position: relative;
+.search {
   display: flex;
-  flex-direction: row;
-
-
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  background-color: white;
 }
 
-/* prideti stiliu, kad kampai butu apvalus */
-
-.search-input,
-.search-button,
-.material-icons {
-  height: 30px;
-  border: 3px solid black;
-  color: var(--main-navbar);
-  background-color: rgba(19, 17, 17);
-  ;
-  /* issiaiskinti, ka tiksliai daro */
+.search-input {
+  border: 3px solid #000;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  padding: 5px;
+  width: 50vh;
+  height: 36px;
+  color: #000;
 }
 
 .search-button {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #000;
+  background: #000;
+  text-align: center;
+  color: #fff;
   border-radius: 0 5px 5px 0;
-  background-color: rgba(19, 17, 17);
+  cursor: pointer;
+  font-size: 20px;
+  /* clip-path: inset(-5px -5px -5px 0px); */
+}
+
+/* .search-button,
+.search-input {
+  box-shadow: 1px 2px 5px #000;
+
+} */
+
+::placeholder {
+  color: #023E41;
 }

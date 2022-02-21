@@ -6,11 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./make-it-yourself.component.css'],
 })
 export class MakeItYourselfComponent implements OnInit {
-  title: string = 'Here you can find out how to make favorite dish yourself!';
-
-  getStr(): string {
-    return ' The most delicous ideas ever!';
-  }
+  todayDate: number = Date.now();
+  hour: number = Date.now();
+  period: number = Date.now();
 
   constructor() {}
 

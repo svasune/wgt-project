@@ -10,30 +10,34 @@ import { MatTableModule } from '@angular/material/table';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './routes/app-routing.module';
+
 import { AppComponent } from './app.component';
 
+import { AllRecipesComponent } from './components/all-recipes/all-recipes.component';
 import { MakeItYourselfComponent } from './components/make-it-yourself/make-it-yourself.component';
 import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
-import { NavSearchComponent } from './components/nav-search/nav-search.component';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
-import { FormsModule } from '@angular/forms';
 import { ApiService } from './services/api.service';
 import { RecipiesApiService } from './services/recipies-api.service';
-import { AllRecipesComponent } from './components/all-recipes/all-recipes.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AllRecipesComponent,
     MakeItYourselfComponent,
-    NavSearchComponent,
-    SearchBarComponent,
+    NavigationComponent,
     RecipeListComponent,
+    SearchBarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,11 +48,12 @@ import { AllRecipesComponent } from './components/all-recipes/all-recipes.compon
     MatCardModule,
     MatGridListModule,
     MatButtonModule,
-    FormsModule,
     MatTableModule,
     MatDividerModule,
     MatListModule,
     MatTabsModule,
+    MatInputModule,
+    MatButtonToggleModule,
   ],
   providers: [ApiService, RecipiesApiService],
   bootstrap: [AppComponent],

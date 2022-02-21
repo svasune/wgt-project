@@ -1,6 +1,15 @@
-<!-- <div>
-  <p>{{ title + getStr() }}</p>
-</div> -->
-<div>hohoho</div>
-
+<div class="container">
+  <h2>Time to cook!</h2>
+  <!--<p class="date">{{todayDate | date: 'full'}}</p>
+-->
+  <div class="clock">
+    <div class="date-container">
+      <span class="day">{{todayDate | date: 'y MMMM d, EEEE'}}</span>
+    </div>
+    <div class="time-container">
+      <span class="hour">{{hour | date: 'hh:mm:ss'}}</span>
+      <span class="period">{{period | date: 'a'}}</span>
+    </div>
+  </div>
+</div>
 <router-outlet></router-outlet>

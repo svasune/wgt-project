@@ -20,4 +20,18 @@ export class ApiService<T> {
   getAll(path: string): Observable<T[]> {
     return this.http.get<T[]>(`${this.hostAddress}/${path}`);
   }
+
+  getOne(id: string): Observable<T> {
+    return this.http.get<T>(`${this.hostAddress}/${id}`);
+  }
+  put(path: string, t: T): Observable<T> {
+    return this.http.put<T>(`${this.hostAddress}/${path}`, t);
+  }
+  post(id: string, data: object): Observable<T> {
+    return this.http.post<T>(`${this.hostAddress}/${id}`, data);
+  }
+  delete(path: string) {
+    return this.http.delete<T>(`${this.hostAddress}/${path}`);
+  }
 }
+//https://www.positronx.io/angular-7-httpclient-http-service/

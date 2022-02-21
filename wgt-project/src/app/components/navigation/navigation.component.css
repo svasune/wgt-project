@@ -1,0 +1,160 @@
+/* material angular button */
+
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+/* TOP NAVIGATION */
+
+.top-navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+/* LEFT NAVIGATION */
+.left-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+}
+
+.hamburger {
+  margin: 10px;
+  padding: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 900;
+  cursor: pointer;
+  line-height: 0.75;
+}
+
+/* RIGHT NAVIGATION */
+
+.right-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+.recipes,
+.favorite,
+.search {
+  cursor: pointer;
+  font-size: 32px;
+  margin-right: 50px;
+}
+
+/* 
+.recipes a:hover,
+.favorite a:hover {
+  background-color: rgba(0, 0, 0, 0.618);
+  color: #fff;
+  ;
+} 
+
+NB!!!! ADD HOVER EFFECTS, BEFORE--AFTER
+
+*/
+
+/* BOTTOM NAVIGATION */
+
+.bottom-nav {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  align-items: center;
+  padding: 15px;
+  font-weight: 550;
+  height: 50px;
+  width: 100%;
+}
+
+.breakfast,
+.lunch,
+.dinner,
+.dressings,
+.desserts {
+  padding-left: 25px;
+  align-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #000000
+}
+
+/* DIVIDER */
+
+.divider-1 {
+  height: 1px;
+  background-color: #000000;
+  width: 100%;
+}
+
+.divider {
+  height: 0.25px;
+  background-color: #00000041;
+  width: 100%;
+}
+
+@media (max-width:600px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  .bottom-nav {
+    display: none;
+  }
+
+  .top-navigation,
+  .right-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+  }
+}

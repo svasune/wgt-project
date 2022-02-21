@@ -11,6 +11,8 @@ import { Recipie } from 'src/app/shared/recipie';
 })
 export class AllRecipesComponent implements OnInit {
   recipies: Recipie[] = [];
+  public icon = 'favorite_border';
+
   constructor(private recipiesApiService: RecipiesApiService) {}
 
   ngOnInit(): void {
@@ -21,6 +23,15 @@ export class AllRecipesComponent implements OnInit {
       this.recipies = recipies;
     });
   }
+  addToFavorites() {
+    this.recipiesApiService.addToList().subscribe(({ recipies }: any): void => {
+      this.recipies = recipies;
+    });
+  }
+  public changeIcon(newIcon: string) {
+    this.icon = newIcon;
+  }
+  //** MOCK API **
   // loadRecipies = () => {
   //   this.api.get('/api/recipies').subscribe(({ recipies }: any): void => {
   //     this.recipies = recipies;
