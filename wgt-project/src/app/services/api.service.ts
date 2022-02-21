@@ -7,21 +7,17 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class ApiService<T> {
-  apiUrl: string;
-
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
       Accept: 'application/json',
     }),
   };
+  hostAddress = `${environment.hostAddress}`;
 
-  constructor(private _http: HttpClient) {
-    this.apiUrl = `${environment.hostAddress}`;
-  }
+  constructor(private http: HttpClient) {}
 
-  getAll<T>(path: string): Observable<T[]> {
-    this.httpOptions;
-    return this._http.get<T[]>(`${this.apiUrl}/${path}`, this.httpOptions);
+  getAll(path: string): Observable<T[]> {
+    return this.http.get<T[]>(`${this.hostAddress}/${path}`);
   }
 }

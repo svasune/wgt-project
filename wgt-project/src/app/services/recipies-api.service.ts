@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -8,11 +8,11 @@ import { ApiService } from './api.service';
 @Injectable({
   providedIn: 'root',
 })
-export class RecipiesApi {
-  readonly hostAddress = environment;
+export class RecipiesApiService {
+  //hostAddress = `${environment.hostAddress}`;
   constructor(private apiService: ApiService<Recipie>) {}
 
-  getAllRecipies<Recipie>(): Observable<Recipie[]> {
-    return this.apiService.getAll<Recipie>(`${this.hostAddress}/Recipie/all`);
+  getAllRecipies(): Observable<Recipie[]> {
+    return this.apiService.getAll(`Recipie/all`);
   }
 }

@@ -1,38 +1,29 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ApiService } from 'src/app/services/api.service';
-import { MockApiService } from 'src/app/services/mock-api.service';
-import { RecipiesApi } from 'src/app/services/recipies-api';
+import { RecipiesApiService } from 'src/app/services/recipies-api.service';
 import { Recipie } from 'src/app/shared/recipie';
 
 @Component({
   selector: 'app-all-recipes',
   templateUrl: './all-recipes.component.html',
   styleUrls: ['./all-recipes.component.css'],
-  providers: [{ provide: ApiService, useClass: RecipiesApi }],
 })
 export class AllRecipesComponent implements OnInit {
   recipies: Recipie[] = [];
-
-  // Recipie Api data from Server
-  constructor(private recipiesApi: RecipiesApi) {}
+  constructor(private recipiesApiService: RecipiesApiService) {}
 
   ngOnInit(): void {
-    this.recipiesApi.getAllRecipies().subscribe((recipies) => {
-      console.log(recipies);
+    this.loadRecipies();
+  }
+  loadRecipies() {
+    this.recipiesApiService.getAllRecipies().subscribe((recipies) => {
+      this.recipies = recipies;
     });
   }
+  // loadRecipies = () => {
+  //   this.api.get('/api/recipies').subscribe(({ recipies }: any): void => {
+  //     this.recipies = recipies;
+  //   });
+  // };
 }
-
-// FETCHING DATA FROM  << MOCK API >>
-// constructor(private mockApi: MockApiService) {}
-
-// ngOnInit(): void {
-//   this.loadRecipes();
-// }
-
-// private loadRecipes(): void {
-//   this.mockApi
-//     .getRecipes()
-//     .subscribe((recipes: Recipie[]) => (this.recipies = recipes));
-// }

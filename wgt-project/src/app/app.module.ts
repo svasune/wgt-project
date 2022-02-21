@@ -15,7 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './routes/app-routing.module';
 import { AppComponent } from './app.component';
-import { AllRecipesComponent } from './components/all-recipes/all-recipes.component';
+
 import { MakeItYourselfComponent } from './components/make-it-yourself/make-it-yourself.component';
 import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
 import { NavSearchComponent } from './components/nav-search/nav-search.component';
@@ -23,7 +23,8 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 
 import { FormsModule } from '@angular/forms';
 import { ApiService } from './services/api.service';
-import { RecipiesApi } from './services/recipies-api';
+import { RecipiesApiService } from './services/recipies-api.service';
+import { AllRecipesComponent } from './components/all-recipes/all-recipes.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { RecipiesApi } from './services/recipies-api';
     MatListModule,
     MatTabsModule,
   ],
-  providers: [ApiService],
+  providers: [ApiService, RecipiesApiService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
