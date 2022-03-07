@@ -11,11 +11,13 @@ export class HighlightDirective {
   @HostListener('mouseenter') onMouseEnter() {
     this.highlight('#023E41');
     this.bold('900');
+    this.formatter('vegetarian');
   }
 
   @HostListener('mouseleave') onMouseLeave() {
     this.highlight('');
     this.bold('');
+    this.formatter('who knows?');
   }
 
   private highlight(color: string) {
@@ -24,5 +26,9 @@ export class HighlightDirective {
 
   private bold(weight: string) {
     this.el.nativeElement.style.fontWeight = weight;
+  }
+
+  private formatter(text: string): void {
+    this.el.nativeElement.style.content = text;
   }
 }

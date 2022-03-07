@@ -29,7 +29,7 @@ import { RecipiesApiService } from './services/recipies-api.service';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HighlightDirective } from './directives/highlight.directive';
-import { TimePipe } from './pipes/time.pipe';
+import { VegetarianDirective } from './directives/vegetarian.directive';
 
 @NgModule({
   declarations: [
@@ -37,11 +37,11 @@ import { TimePipe } from './pipes/time.pipe';
     AllRecipesComponent,
     MakeItYourselfComponent,
     NavigationComponent,
-    RecipeListComponent,
+
     SearchBarComponent,
     FooterComponent,
     HighlightDirective,
-    TimePipe,
+    VegetarianDirective,
   ],
   imports: [
     BrowserModule,

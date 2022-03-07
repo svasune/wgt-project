@@ -10,8 +10,14 @@ import { Recipie } from 'src/app/shared/recipie';
   styleUrls: ['./all-recipes.component.css'],
 })
 export class AllRecipesComponent implements OnInit {
+  text = 'red';
   recipies: Recipie[] = [];
   public icon = 'favorite_border';
+
+  myClickHandler($event: MouseEvent): void {
+    //    document.getElementById('theForm').submit();
+    location.href = 'http://localhost:5000/Recipie/5';
+  }
 
   constructor(private recipiesApiService: RecipiesApiService) {}
 
@@ -32,12 +38,20 @@ export class AllRecipesComponent implements OnInit {
     this.icon = newIcon;
   }
 
-  // konvertuoti IS VEGETARIAN į lapelio ikoną.
-
-  //** MOCK API **
-  // loadRecipies = () => {
-  //   this.api.get('/api/recipies').subscribe(({ recipies }: any): void => {
-  //     this.recipies = recipies;
-  //   });
-  // };
+  getDetails() {
+    //   this.route.params.forEach((params: Params) => {
+    //     this.fetchDataService.getRecipie().subscribe( data => {
+    //     this.cards = [...data];
+    //     this.cardDetails = this.cards.find(card => card._id === params.details);
+    //   })
+    // });
+  }
 }
+// konvertuoti IS VEGETARIAN į lapelio ikoną.
+
+//** MOCK API **
+// loadRecipies = () => {
+//   this.api.get('/api/recipies').subscribe(({ recipies }: any): void => {
+//     this.recipies = recipies;
+//   });
+// };

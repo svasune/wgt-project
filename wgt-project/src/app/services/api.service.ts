@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -18,12 +18,17 @@ export class ApiService<T> {
   constructor(private http: HttpClient) {}
 
   getAll(path: string): Observable<T[]> {
-    return this.http.get<T[]>(`${this.hostAddress}/${path}`);
+    return this.http.get<T[]>(`${this.hostAddress}/${path}`); //Recipies/all
   }
 
-  getOne(id: string): Observable<T> {
-    return this.http.get<T>(`${this.hostAddress}/${id}`);
+  getOne(path: string, id: number, res: string) {
+    return this.http.get(`${this.hostAddress}/${path}/${id}`).pipe(
+      map((res) => {
+        return res;
+      })
+    ); // Recipies/id
   }
+
   put(path: string, t: T): Observable<T> {
     return this.http.put<T>(`${this.hostAddress}/${path}`, t);
   }

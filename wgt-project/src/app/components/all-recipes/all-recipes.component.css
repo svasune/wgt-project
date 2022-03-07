@@ -48,7 +48,10 @@ mat-card-actions {
 
 @media only screen and (max-width: 800px) {
   .grid {
+    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
   }
 }

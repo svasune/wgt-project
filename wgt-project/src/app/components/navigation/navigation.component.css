@@ -10,6 +10,7 @@
   left: 0;
   right: 0;
   padding-bottom: 30px;
+  position: relative;
 }
 
 ul {
@@ -141,20 +142,29 @@ NB!!!! ADD HOVER EFFECTS, BEFORE--AFTER
   .navigation {
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    height: fit-content;
   }
 
-  .bottom-nav {
+  .bottom-nav,
+  .logo,
+  .hamburger {
     display: none;
   }
 
+  .top-navigation {
+    align-items: flex-start;
+    align-content: flex-start;
+    text-align: left;
+  }
+
   .top-navigation,
-  .right-nav {
+  .right-nav,
+  .left-nav,
+  ul,
+  li {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    align-content: center;
-    text-align: center;
   }
+
+
 }

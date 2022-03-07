@@ -19,8 +19,8 @@ export class RecipiesApiService {
   getAllRecipies(): Observable<Recipie[]> {
     return this.apiService.getAll(`Recipie/all`);
   }
-  getRecipie(): Observable<Recipie> {
-    return this.apiService.getOne(`Recipie/recipieId`);
+  getRecipie(recipieId: number, res: string): Observable<Recipie> {
+    return this.apiService.getOne(`Recipie`, recipieId, res);
   }
   addToList(): Observable<Recipie> {
     return this.apiService.post(`Recipie/` + `recipieId`, {});
