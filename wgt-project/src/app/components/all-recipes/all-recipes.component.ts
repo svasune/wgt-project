@@ -14,11 +14,6 @@ export class AllRecipesComponent implements OnInit {
   recipies: Recipie[] = [];
   public icon = 'favorite_border';
 
-  myClickHandler($event: MouseEvent): void {
-    //    document.getElementById('theForm').submit();
-    location.href = 'http://localhost:5000/Recipie/5';
-  }
-
   constructor(private recipiesApiService: RecipiesApiService) {}
 
   ngOnInit(): void {
@@ -29,25 +24,15 @@ export class AllRecipesComponent implements OnInit {
       this.recipies = recipies;
     });
   }
-  addToFavorites() {
-    this.recipiesApiService.addToList().subscribe(({ recipies }: any): void => {
-      this.recipies = recipies;
-    });
-  }
+  // addToFavorites() {
+  //   this.recipiesApiService.addToList().subscribe(({ recipies }: any): void => {
+  //     this.recipies = recipies;
+  //   });
+  // }
   public changeIcon(newIcon: string) {
     this.icon = newIcon;
   }
-
-  getDetails() {
-    //   this.route.params.forEach((params: Params) => {
-    //     this.fetchDataService.getRecipie().subscribe( data => {
-    //     this.cards = [...data];
-    //     this.cardDetails = this.cards.find(card => card._id === params.details);
-    //   })
-    // });
-  }
 }
-// konvertuoti IS VEGETARIAN į lapelio ikoną.
 
 //** MOCK API **
 // loadRecipies = () => {

@@ -1,3 +1,7 @@
+* {
+  padding: 30px;
+}
+
 .recipie-list {
   padding: 25px;
 }
@@ -14,25 +18,26 @@ h2 {
 }
 
 img {
-  max-width: 80%;
+  max-width: 50%;
   height: auto;
   vertical-align: bottom;
   margin: 15px 0 0 0;
+
 }
 
 
 h3 {
   padding-top: 10px;
   padding-bottom: 15px;
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 36px;
+  font-weight: 900;
 }
 
 .ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: rgba(176, 231, 245, 0.658);
+  background-color: black;
 }
 
 .ul,
@@ -41,12 +46,12 @@ h3 {
 
   display: inline-block;
   font-weight: 600;
-  color: rgb(12, 116, 7);
+  color: white;
   margin: 5px;
 }
 
 .li {
-  border-left: 1px solid rgb(12, 116, 7);
+  border-left: 1px solid white;
 
 }
 

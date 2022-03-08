@@ -4,19 +4,22 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
   selector: '[appVegetarian]',
 })
 export class VegetarianDirective {
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef) {
+    this.el.nativeElement.innerHTML = '<span class="material-icons">spa</span>';
+  }
 
   @Input() appVegetarian = '';
 
-  @HostListener('mouseenter') onMouseEnter() {
-    this.highlight('<span class="material-icons">spa</span>');
-  }
+  //   @HostListener('mouseenter') onMouseEnter() {
+  //     this.highlight('<span class="material-icons">spa</span>');
+  //   }
 
-  @HostListener('mouseleave') onMouseLeave() {
-    this.highlight('<span class="material-icons">spa</span>');
-  }
+  //   @HostListener('mouseleave') onMouseLeave() {
+  //     this.highlight('<span class="material-icons">spa</span>');
+  //   }
 
-  private highlight(_text: string) {
-    this.el.nativeElement.innerHTML = '<span class="material-icons">spa</span>';
-  }
+  //   private highlight(_text: string) {
+  //     this.el.nativeElement.innerHTML = '<span class="material-icons">spa</span>';
+  //   }
+  // }
 }

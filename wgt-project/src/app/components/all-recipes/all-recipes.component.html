@@ -6,15 +6,12 @@
         <mat-card-title align="center">{{ recipie.name }}</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <span [appVegetarian]="text">
-          {{ recipie.isVegetarian }}</span>
-        <!-- Jeigu boolean reiksme true, gauna vienoki spana, jei false - kitoki -->
         <span class="content material-icons">
           watch_later
         </span>
         <span class="content">{{ recipie.timeToCook?.hours }}h </span>
         <span class="content">{{ recipie.timeToCook?.minutes }}min</span>
-
+        <span *ngIf="recipie.isVegetarian == true" [appVegetarian]="text"></span>
       </mat-card-content>
       <img mat-card-image src="{{ recipie.imageUrl }}" alt="Photo of a {{ recipie.name }}">
       <mat-card-actions>
