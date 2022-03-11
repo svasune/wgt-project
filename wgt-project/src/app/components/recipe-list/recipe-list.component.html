@@ -1,31 +1,219 @@
-<!-- <app-all-recipes [recipies]="recipies"></app-all-recipes> -->
+<div class="container" *ngIf="recipie">
 
-<div class="recipe-card" *ngIf="recipie">
-  <h2>{{recipie.name}}</h2>
-  <img src="{{recipie.imageUrl}}" alt="{{ recipie.name }}" />
-  <div class="recipe-content">
+  <!-- TOP -->
 
-    <h3>Breakfast</h3>
+  <div class="recipe-top">
+    <h2>{{recipie.name}}</h2>
     <ul class="ul">
-      <li class="li"><span class="icon icon-users"></span><span>1 person</span></li>
+      <li class="li"><span class="material-icons"> people </span><span>1 person</span></li>
       <li class="li"><span class="icon icon-calories"></span><span>vegetarian</span></li>
       <!-- if vegetarian, print "vegetarian" -->
-      <li class="li"><span class="icon icon-calories"></span><span>simple</span></li>
-      <li class="li"> <span class="content">{{ recipie.timeToCook?.hours }}h </span> <span
+      <li class="li"><span>simple</span></li>
+      <li class="li"><span class="material-icons">watch_later</span><span
+          class="content">{{ recipie.timeToCook?.hours }}h </span> <span
           class="content">{{ recipie.timeToCook?.minutes }}min</span></li>
-
-
-      <li class="li"><span class="icon icon-calories"></span><span>248 cal</span></li>
-
+      <li class="li"><span class="material-icons"> whatshot </span><span>248 cal</span></li>
     </ul>
-    <p>Here will be some super interesting and important content which nobady will ever read!</p>
-
-    <ul class="ingredients">Ingredients:
-      <li>SOMETHING FROM SERVER</li>
-      <li>SOMETHING FROM SERVER</li>
-      <li>SOMETHING FROM SERVER</li>
-    </ul>
-
+    <h4>Make your breakfast perfect again!</h4>
+    <p>Posted March 9, 2022</p>
   </div>
 
+  <!-- MIDDLE -->
+
+  <!-- left -->
+
+  <div class="recipe-middle">
+
+    <div class="recipe-card">
+      <div class="img">
+        <img src="{{recipie.imageUrl}}" alt="{{ recipie.name }}" />
+      </div>
+      <div class="recipe-content">
+        <p class="recipe-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores et modi,
+          adipisci
+          quisquam laudantium deserunt. Excepturi praesentium maiores, officiis minus consequatur quaerat eligendi
+          voluptatem, eum nesciunt accusantium illo provident. Ipsa corporis libero laboriosam quia ratione! Ipsum omnis
+          iste excepturi nobis suscipit quod iusto numquam laudantium possimus officiis alias illum voluptatibus
+          architecto cumque, delectus incidunt ab rem repellendus explicabo doloremque molestias odio asperiores?
+          Necessitatibus atque ipsam nihil, dignissimos nisi sint laboriosam porro nostrum delectus sequi expedita.</p>
+
+        <h4 class="h4-ingredients">What is a {{recipie.name}}?</h4>
+        <p class="recipe-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores et modi,
+          adipisci
+          quisquam laudantium deserunt. Excepturi praesentium maiores, officiis minus consequatur quaerat eligendi
+          voluptatem, eum nesciunt accusantium illo provident. Ipsa corporis libero laboriosam quia ratione! Ipsum omnis
+          iste excepturi nobis suscipit quod iusto numquam laudantium possimus officiis alias illum voluptatibus
+          architecto cumque, delectus incidunt ab rem repellendus explicabo doloremque molestias odio asperiores?
+          Necessitatibus atque ipsam nihil, dignissimos nisi sint laboriosam porro nostrum delectus sequi expedita.</p>
+
+        <h4 class="h4-ingredients">How to make {{recipie.name}}</h4>
+        <ol class="ingredients-ol">
+          <li class="ingredients-li"> <b>SOMETHING FROM SERVER</b> Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+            Dolor, in fuga.
+            Consequuntur fugiat ipsum nostrum cupiditate, officiis sunt. Aliquam dignissimos harum quia! Inventore,
+            temporibus veniam.</li>
+          <li class="ingredients-li"> <b>SOMETHING FROM SERVER</b> Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+            Dolor, in fuga.
+            Consequuntur fugiat ipsum nostrum cupiditate, officiis sunt. Aliquam dignissimos harum quia! Inventore,
+            temporibus veniam.</li>
+          <li class="ingredients-li"> <b>SOMETHING FROM SERVER</b> Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+            Dolor, in fuga.
+            Consequuntur fugiat ipsum nostrum cupiditate, officiis sunt. Aliquam dignissimos harum quia! Inventore,
+            temporibus veniam.</li>
+          <li class="ingredients-li"> <b>SOMETHING FROM SERVER</b> Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+            Dolor, in fuga.
+            Consequuntur fugiat ipsum nostrum cupiditate, officiis sunt. Aliquam dignissimos harum quia! Inventore,
+            temporibus veniam.</li>
+          <li class="ingredients-li"> <b>SOMETHING FROM SERVER</b> Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+            Dolor, in fuga.
+            Consequuntur fugiat ipsum nostrum cupiditate, officiis sunt. Aliquam dignissimos harum quia! Inventore,
+            temporibus veniam.</li>
+        </ol>
+
+        <div class="img">
+          <img src="{{recipie.imageUrl}}" alt="{{ recipie.name }}" />
+        </div>
+
+        <h4 class="h4-ingredients">Ingredients</h4>
+        <ul class="ingredients-ul">
+          <li class="ingredients-li"> <b>SOMETHING FROM SERVER</b> Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+            Dolor, in fuga.
+            Consequuntur fugiat ipsum nostrum cupiditate, officiis sunt. Aliquam dignissimos harum quia! Inventore,
+            temporibus veniam.</li>
+          <li class="ingredients-li"> <b>SOMETHING FROM SERVER</b> Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+            Dolor, in fuga.
+            Consequuntur fugiat ipsum nostrum cupiditate, officiis sunt. Aliquam dignissimos harum quia! Inventore,
+            temporibus veniam.</li>
+          <li class="ingredients-li"> <b>SOMETHING FROM SERVER</b> Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+            Dolor, in fuga.
+            Consequuntur fugiat ipsum nostrum cupiditate, officiis sunt. Aliquam dignissimos harum quia! Inventore,
+            temporibus veniam.</li>
+          <li class="ingredients-li"> <b>SOMETHING FROM SERVER</b> Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+            Dolor, in fuga.
+            Consequuntur fugiat ipsum nostrum cupiditate, officiis sunt. Aliquam dignissimos harum quia! Inventore,
+            temporibus veniam.</li>
+          <li class="ingredients-li"> <b>SOMETHING FROM SERVER</b> Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit.
+            Dolor, in fuga.
+            Consequuntur fugiat ipsum nostrum cupiditate, officiis sunt. Aliquam dignissimos harum quia! Inventore,
+            temporibus veniam.</li>
+        </ul>
+
+        <h4 class="h4-ingredients">How to serve {{recipie.name}}?</h4>
+        <p class="recipe-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores et modi,
+          adipisci
+          quisquam laudantium deserunt. Excepturi praesentium maiores, officiis minus consequatur quaerat eligendi
+          voluptatem, eum nesciunt accusantium illo provident. Ipsa corporis libero laboriosam quia ratione! Ipsum omnis
+          iste excepturi nobis suscipit quod iusto numquam laudantium possimus officiis alias illum voluptatibus
+          architecto cumque, delectus incidunt ab rem repellendus explicabo doloremque molestias odio asperiores?
+          Necessitatibus atque ipsam nihil, dignissimos nisi sint laboriosam porro nostrum delectus sequi expedita.</p>
+
+      </div>
+    </div>
+
+    <!-- right -->
+
+    <div class="about">
+      <div class="description">
+        <h4 class="h4-description">Hi, glad you're here!</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium illo dolor laboriosam! Sapiente nulla,
+          vero aliquam nobis tenetur deleniti quidem, debitis libero mollitia illum provident fugiat dolorem assumenda
+          repudiandae est iure nostrum.</p>
+        <h4 class="h4-description">Stay up to date</h4>
+        <ul class="description-ul">
+          <li class="description-li"><a class="foot-m"><img
+                src="https://img.icons8.com/ios-filled/30/000000/facebook.png" /></a></li>
+          <li class="description-li"><a class="foot-m"><img
+                src="https://img.icons8.com/ios-filled/30/000000/linkedin.png" /></a></li>
+          <li class="description-li"><a class="foot-m"><img
+                src="https://img.icons8.com/ios-filled/30/000000/twitter.png" /></a></li>
+          <li class="description-li"><a class="foot-m"><img
+                src="https://img.icons8.com/ios-glyphs/30/000000/instagram-new.png" /></a></li>
+        </ul>
+      </div>
+
+      <!-- bottom-right -->
+
+      <div class="recent-posts">
+        <h3 class="h3-recent-posts">Latests posts</h3>
+        <div class="visual">
+
+          <!-- NG FOR TAM, KAD BUTU ATVAIZDUOTI VISI POSTAI SONE KAIP BLOGUOSE BUNA -->
+
+          <div class="recipe">
+            <div class="recipe-info">
+              <div class="number">1</div>
+              <div class="title">
+                <p class="recipe-type">Noodles</p>
+                <h3 class="recipe-title">Tiktok Ramen</h3>
+              </div>
+            </div>
+            <div class="recent-posts-content">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit ea alias similique itaque asperiores
+                hic
+                iste minus cumque nostrum ullam!</p>
+            </div>
+          </div>
+
+          <div class="recipe">
+            <div class="recipe-info">
+              <div class="number">2</div>
+              <div class="title">
+                <p class="recipe-type">SEAFOOD</p>
+                <h3 class="recipe-title">Sushi Bake</h3>
+              </div>
+            </div>
+            <div class="recent-posts-content">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit ea alias similique itaque asperiores
+                hic
+                iste minus cumque nostrum ullam!</p>
+            </div>
+          </div>
+
+          <div class="recipe">
+            <div class="recipe-info">
+              <div class="number">3</div>
+              <div class="title">
+                <p class="recipe-type">Desserts</p>
+                <h3 class="recipe-title">French Macarons</h3>
+              </div>
+            </div>
+            <div class="recent-posts-content">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit ea alias similique itaque asperiores
+                hic
+                iste minus cumque nostrum ullam!</p>
+            </div>
+          </div>
+
+          <div class="recipe">
+            <div class="recipe-info">
+              <div class="number">4</div>
+              <div class="title">
+                <p class="recipe-type">Salad</p>
+                <h3 class="recipe-title">Greek Salad </h3>
+              </div>
+            </div>
+            <div class="recent-posts-content">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit ea alias similique itaque asperiores
+                hic
+                iste minus cumque nostrum ullam!</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div>
+      </div>
+
+    </div>
+  </div>
 </div>
