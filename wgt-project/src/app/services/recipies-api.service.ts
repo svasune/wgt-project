@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, of, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Recipie } from '../shared/recipie';
 import { ApiService } from './api.service';
@@ -28,7 +28,11 @@ export class RecipiesApiService {
     return this.apiService.getOne(`Recipie`, recipieId);
   }
 
-  addToList(): Observable<Recipie> {
+  searchRecipies(term: string): Observable<Recipie[]> {
+    return this.apiService.search(`Recipie/?name=${term}`);
+  }
+
+  addToList(): Observable<Recipie[]> {
     return this.apiService.post(`Recipie/` + `recipieId`, {});
   }
 }

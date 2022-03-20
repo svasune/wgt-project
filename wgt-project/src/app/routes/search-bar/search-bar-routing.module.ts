@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SearchBarComponent } from '../../components/search-bar/search-bar.component';
+import { SearchBarComponent } from 'src/app/components/search-bar/search-bar.component';
 
 const routes: Routes = [
   {

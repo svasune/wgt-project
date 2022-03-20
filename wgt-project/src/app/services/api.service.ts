@@ -21,10 +21,12 @@ export class ApiService<T> {
     private messageService: MessageService
   ) {}
 
+  // GET METHOD
   getAll(path: string): Observable<T[]> {
     return this.http.get<T[]>(`${this.hostAddress}/${path}`); //Recipies/all
   }
 
+  // GET METHOD BY ID
   getOne(path: string, id: number): Observable<T> {
     return this.http.get<T>(`${this.hostAddress}/${path}/${id}`).pipe(
       tap((_) => this.log(`fetched data id=${id}`)),
@@ -42,20 +44,32 @@ export class ApiService<T> {
     this.messageService.add(`AppService: ${message}`);
   }
 
-  // getOne(path: string, id: number, res: string) {
-  //   return this.http.get(`${this.hostAddress}/${path}/${id}`).pipe(
-  //     map((res) => {
-  //       return res;
-  //     })
-  //   ); // Recipies/id
-  // }
+  // GET METHOD BY ID -- FOR SEARCH BAR
+  search(term: string): Observable<T[]> {
+    if (!term.trim()) {
+      // if not search term, return empty hero array.
+      return of([]);
+    }
+    return this.http.get<T[]>(`${this.hostAddress}/?name=${term}`).pipe(
+      tap((x) =>
+        x.length
+          ? this.log(`found recipies matching "${term}"`)
+          : this.log(`no recipies matching "${term}"`)
+      ),
+      catchError(this.handleError<T[]>('searchRecipies', []))
+    );
+  }
+
+  post(path: any, data: object): Observable<T[]> {
+    return this.http
+      .post<T[]>(`${this.hostAddress}/${path}`, data)
+      .pipe(map((d) => d));
+  }
 
   put(path: string, t: T): Observable<T> {
     return this.http.put<T>(`${this.hostAddress}/${path}`, t);
   }
-  post(path: any, data: object): Observable<T> {
-    return this.http.post<T>(`${this.hostAddress}/${path}`, data);
-  }
+
   delete(path: string) {
     return this.http.delete<T>(`${this.hostAddress}/${path}`);
   }

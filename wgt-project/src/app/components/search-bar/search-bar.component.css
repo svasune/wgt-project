@@ -1,3 +1,19 @@
+.container,
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 5% 15% 20% 15%;
+}
+
+.search-container {
+  padding-bottom: 25px;
+}
+
 .search {
   display: flex;
   position: relative;
@@ -35,6 +51,9 @@
 
 } */
 
-::placeholder {
-  color: #023E41;
+
+/* TABLE */
+
+table {
+  width: 100%;
 }

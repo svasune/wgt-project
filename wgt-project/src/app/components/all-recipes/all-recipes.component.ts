@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 import { RecipiesApiService } from 'src/app/services/recipies-api.service';
 import { Recipie } from 'src/app/shared/recipie';
@@ -12,7 +12,8 @@ import { Recipie } from 'src/app/shared/recipie';
 export class AllRecipesComponent implements OnInit {
   text = 'red';
   recipies: Recipie[] = [];
-  public icon = 'favorite_border';
+  @Input() selected: boolean | undefined;
+  @Output() selectedChange = new EventEmitter<boolean>();
 
   constructor(private recipiesApiService: RecipiesApiService) {}
 
@@ -29,8 +30,9 @@ export class AllRecipesComponent implements OnInit {
   //     this.recipies = recipies;
   //   });
   // }
-  public changeIcon(newIcon: string) {
-    this.icon = newIcon;
+  public toggleSelected() {
+    this.selected = !this.selected;
+    this.selectedChange.emit(this.selected);
   }
 }
 

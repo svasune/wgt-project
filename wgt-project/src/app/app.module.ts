@@ -12,6 +12,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatRadioModule } from '@angular/material/radio';
+
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -22,14 +26,16 @@ import { AppComponent } from './app.component';
 import { AllRecipesComponent } from './components/all-recipes/all-recipes.component';
 import { MakeItYourselfComponent } from './components/make-it-yourself/make-it-yourself.component';
 import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
 
 import { ApiService } from './services/api.service';
 import { RecipiesApiService } from './services/recipies-api.service';
-import { SearchBarComponent } from './components/search-bar/search-bar.component';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { VegetarianDirective } from './directives/vegetarian.directive';
+import { MatSelectModule } from '@angular/material/select';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { SearchFilterPipe } from './pipes/search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -37,11 +43,11 @@ import { VegetarianDirective } from './directives/vegetarian.directive';
     AllRecipesComponent,
     MakeItYourselfComponent,
     NavigationComponent,
-
     SearchBarComponent,
     FooterComponent,
     HighlightDirective,
     VegetarianDirective,
+    SearchFilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +64,9 @@ import { VegetarianDirective } from './directives/vegetarian.directive';
     MatTabsModule,
     MatInputModule,
     MatButtonToggleModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatRadioModule,
   ],
   providers: [ApiService, RecipiesApiService],
   bootstrap: [AppComponent],
