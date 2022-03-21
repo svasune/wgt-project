@@ -26,6 +26,10 @@ export class ApiService<T> {
     return this.http.get<T[]>(`${this.hostAddress}/${path}`); //Recipies/all
   }
 
+  getFilter(path: string): Observable<T[]> {
+    return this.http.get<T[]>(`${this.hostAddress}/${path}`); //Recipies/all
+  }
+
   // GET METHOD BY ID
   getOne(path: string, id: number): Observable<T> {
     return this.http.get<T>(`${this.hostAddress}/${path}/${id}`).pipe(

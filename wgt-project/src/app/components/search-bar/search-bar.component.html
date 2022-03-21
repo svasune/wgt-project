@@ -1,26 +1,17 @@
-<div class="search">
-  <input class="search-input" name="search" type="text" placeholder="Search 1,000+ recipes">
-  <button class="search-button"><i class="material-icons">search</i></button>
+<div class="search-container">
+  <div class="form-group search">
+    <input type="text" name="search" class="form-control search-input" placeholder="Search 1,000+ recipes"
+      [(ngModel)]="term" />
+    <button class="search-button"><i class="material-icons">search</i></button>
+  </div>
+
+  <table class="table">
+    <tbody>
+      <tr *ngFor="let recipie of recipies | filter:term">
+        <td [appHighlight]="color" routerLink="/recipie/{{recipie.recipieId}}" routerLinkActive="active">
+          {{recipie.name}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-
-
 <!-- MUST IMPLEMENT THIS ONE AS WELL: https://material.angular.io/components/autocomplete/examples -->
-
-<br>
-
-<table mat-table [dataSource]="recipies" class="mat-elevation-z8">
-
-  <ng-container matColumnDef="recipieId">
-    <th mat-header-cell *matHeaderCellDef> No. </th>
-    <td mat-cell *matCellDef="let recipie of recipies"> {{ recipie.recipieId }} </td>
-  </ng-container>
-
-  <ng-container matColumnDef="name">
-    <th mat-header-cell *matHeaderCellDef> Title </th>
-    <td mat-cell *matCellDef="let recipie of recipies"> {{ recipie.name }} </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>

@@ -20,6 +20,9 @@ export class RecipiesApiService {
     return this.apiService.getAll(`Recipie/all`);
   }
 
+  getRecipiesFilter(): Observable<Recipie[]> {
+    return this.apiService.getFilter(`Recipie/all`);
+  }
   // getRecipie(recipieId: number, res: string): Observable<Recipie> {
   //   return this.apiService.getOne(`Recipie`, recipieId, res);
   // }

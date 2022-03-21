@@ -36,6 +36,10 @@ import { VegetarianDirective } from './directives/vegetarian.directive';
 import { MatSelectModule } from '@angular/material/select';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { FavoritesComponent } from './components/favorites/favorites.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,6 +52,7 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
     HighlightDirective,
     VegetarianDirective,
     SearchFilterPipe,
+    FavoritesComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,6 +72,10 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
     MatFormFieldModule,
     MatSelectModule,
     MatRadioModule,
+    MatPaginatorModule,
+    Ng2SearchPipeModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [ApiService, RecipiesApiService],
   bootstrap: [AppComponent],

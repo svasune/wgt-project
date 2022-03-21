@@ -1,7 +1,6 @@
+<!-- clock -->
 <div class="clock-container">
   <h2>Time to cook!</h2>
-  <!--<p class="date">{{todayDate | date: 'full'}}</p>
--->
   <div class="clock">
     <div class="date-container">
       <span class="day">{{todayDate | date: 'y MMMM d, EEEE'}}</span>
@@ -13,75 +12,31 @@
   </div>
 </div>
 
+<!-- BMI calculator -->
+
 <div class="bmi">
   <h2>What's your BMI?</h2>
   <div class="calorie-container">
 
     <div class="counter-form">
       <mat-form-field appearance="fill">
-        <mat-label>Age</mat-label>
-        <input matInput>
-      </mat-form-field>
-
-      <mat-radio-group aria-label="Select an option">
-        <mat-radio-button value="1">Male</mat-radio-button>
-        <mat-radio-button value="2">Female</mat-radio-button>
-      </mat-radio-group>
-
-      <mat-form-field appearance="fill">
         <mat-label>Weight, kg</mat-label>
-        <input matInput id="w">
+        <input matInput type="number" name="kg" [(ngModel)]="kg">
       </mat-form-field>
 
       <mat-form-field appearance="fill">
         <mat-label>Height, cm</mat-label>
-        <input matInput id="h">
+        <input matInput id="h" name="m" [(ngModel)]="m">
       </mat-form-field>
-
-      <!-- <mat-form-field appearance="fill">
-        <mat-label>Select activity level</mat-label>
-        <mat-select>
-          <mat-option value="two">Sedentary (little or no exercise)</mat-option>
-          <mat-option value="one">Lightly active (light exercise/ sports 1- times/week)</mat-option>
-          <mat-option value="two">Moderately active (moderate exercise/ sports 3-5 times/week)</mat-option>
-          <mat-option value="two">Very active (hard exercise / sports 6-7 times/week)</mat-option>
-          <mat-option value="two">Extra active (very harf exercise/ sports & physical job)</mat-option>
-        </mat-select>
-      </mat-form-field>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Select goal</mat-label>
-        <mat-select>
-          <mat-option value="two">Lose weight - 1kg per week</mat-option>
-          <mat-option value="one">Lose weight - 2kg per week</mat-option>
-          <mat-option value="two">Gain weight + 1kg per week</mat-option>
-          <mat-option value="two">Gain weight + 2kg per week</mat-option>
-          <mat-option value="two">Maintain weight</mat-option>
-        </mat-select>
-      </mat-form-field> -->
-      <button mat-raised-button id="btn">Calculate</button>
+      <!-- <button mat-raised-button id="btn" (click)="countBMI()">Calculate</button> -->
     </div>
 
     <div class="form-results">
-      <h3>Results (in kJ)</h3>
-
-      <p id="result">BMI: </p>
-      <p>Required daily cals: </p>
-      <p>Daily Protein cals: </p>
-      <p>Daily Carbs cals: </p>
-      <p>Daily Fat cals: </p>
+      <h3>BMI: {{myBmi()}} </h3>
     </div>
 
   </div>
 </div>
-
-<!-- <div>
-  <input [(ngModel)]="calcInput"  type="number" />
-  <span *ngFor="let item of history; let i = index">{{ i + ' ' + item }}</span>
-  <span *ngIf="getValue() < 0">Negative</span>
-  <span *ngIf="getValue() > 0">Positive</span>
-  <button (click)="add()">+</button>
-</div> -->
 
 
 <router-outlet></router-outlet>
