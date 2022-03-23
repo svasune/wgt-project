@@ -35,5 +35,39 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #07b81f;
+  background: #023e41;
+}
+
+/* DARK-LIGHT THEME */
+
+body.dark-mode {
+  background-color: greenyellow;
+  color: #dfe6e9;
+}
+
+body.light-mode {
+  background-color: papayawhip;
+  color: #2d3436;
+}
+
+body:not(.dark-mode-preloading) {
+  transition: all 0.3s linear;
+}
+
+/* TOGGLE BUTTON */
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: #fff;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: #023e41cb;
+}
+
+.mat-slide-toggle .mat-slide-toggle-bar {
+  background-color: #000;
+}
+
+.mat-slide-toggle .mat-slide-toggle-thumb {
+  background-color: #023e41;
 }

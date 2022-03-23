@@ -10,9 +10,9 @@
         </button>
       </div>
 
-      <div class="logo" href="#">
-        <div class="subtitle" href="#">food for life</div>
-        <div class="title" href="#">FOOD WORLD</div>
+      <div class="logo">
+        <div class="subtitle">food for life</div>
+        <div class="title" routerLink="/all-recipes-component" routerLinkActive="active">FOOD WORLD</div>
       </div>
     </div>
 
@@ -43,6 +43,11 @@
             </svg></a></li>
         <li class="search" routerLink="/search-bar-component" routerLinkActive="active"><a><span></span><i
               [appHighlight]="color" class="material-icons">search</i></a></li>
+        <li><a>
+            <app-dark-mode-toggle>
+            </app-dark-mode-toggle>
+          </a>
+        </li>
       </ul>
 
     </div>
@@ -62,3 +67,4 @@
 
   <div class="divider"></div>
 </div>
+<div></div>

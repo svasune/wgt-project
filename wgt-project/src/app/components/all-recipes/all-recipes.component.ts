@@ -36,6 +36,10 @@ export class AllRecipesComponent implements OnInit {
   }
 }
 
+// add() {
+//   this.itemServ.add(this.item)
+// }
+
 //** MOCK API **
 // loadRecipies = () => {
 //   this.api.get('/api/recipies').subscribe(({ recipies }: any): void => {

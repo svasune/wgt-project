@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 import { NavigationComponent } from './components/navigation/navigation.component';
 
@@ -40,6 +41,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
+import { DarkModeToggleComponent } from './themes/dark-mode-toggle.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +56,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     VegetarianDirective,
     SearchFilterPipe,
     FavoritesComponent,
+    DarkModeToggleComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,11 +77,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     MatRadioModule,
     MatPaginatorModule,
+    MatSlideToggleModule,
     Ng2SearchPipeModule,
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [ApiService, RecipiesApiService],
+  providers: [
+    ApiService,
+    RecipiesApiService,
+    {
+      provide: DARK_MODE_OPTIONS,
+      useValue: {
+        darkModeClass: 'dark-mode',
+        lightModeClass: 'light-mode',
+      },
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
