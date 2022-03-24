@@ -169,3 +169,9 @@ NB!!!! ADD HOVER EFFECTS, BEFORE--AFTER
 
 
 }
+
+material-icons {
+  color: var(--main-text-dark);
+  padding-left: 2px;
+  margin-left: 2px;
+}

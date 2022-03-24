@@ -52,7 +52,6 @@ body.light-mode {
   color: #2d3436;
 
   --main-background: linear-gradient(#023e411c, #023e4104);
-  --main-background2: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(36, 36, 195, 1) 45%, rgba(0, 212, 255, 1) 100%);
   --main-text: white;
   --main-text-dark: black;
   --main-bg-dark: black;
