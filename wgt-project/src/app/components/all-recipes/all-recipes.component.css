@@ -26,7 +26,8 @@
 
 
 mat-card {
-  background: linear-gradient(#023e411c, #023e4104);
+  background: var(--main-background);
+  color: var(--main-text-dark);
 }
 
 /* mat-card:not([class*=mat-elevation-z]) {
@@ -89,4 +90,9 @@ mat-card-actions {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+svg {
+  fill: var(--main-text-dark);
+
 }

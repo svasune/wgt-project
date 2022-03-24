@@ -33,7 +33,7 @@
   padding: 0 10px;
   margin: 0;
   font-weight: 600;
-  color: white;
+  color: var(--main-text);
   text-align: left;
   align-items: baseline;
   align-content: left;
@@ -41,7 +41,7 @@
 
 .ul {
   list-style-type: none;
-  background-color: black;
+  background-color: var(--main-text-dark);
   text-align: left;
   align-items: baseline;
   align-content: left;
@@ -49,7 +49,7 @@
 }
 
 .li {
-  border-left: 1px solid white;
+  border-left: 1px solid var(--main-text);
 }
 
 .li:first-child {
@@ -123,7 +123,7 @@ span {
 }
 
 .description {
-  border-left: 1px solid black;
+  border-left: 1px solid var(--main-text-dark);
   padding: 0 10px 10px 10px;
   font-size: 14px;
   line-height: 24px;
@@ -172,7 +172,7 @@ span {
 }
 
 .recipe {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.453);
+  border-bottom: 1px solid var(--border-bottom);
   padding: 5px;
   margin: 5px;
 }
@@ -188,7 +188,7 @@ span {
 .number {
   font-size: 62px;
   font-weight: 900;
-  color: #023E41;
+  color: var(--main-green);
   padding-right: 5px;
 
 }
@@ -197,7 +197,7 @@ span {
 .recipe-type {
   font-size: 12px;
   font-weight: 600;
-  color: #023E41;
+  color: var(--main-green);
 }
 
 .recipe-title {

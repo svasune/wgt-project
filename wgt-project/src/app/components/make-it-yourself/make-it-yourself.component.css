@@ -32,17 +32,17 @@ h2 {
   padding: 20px 30px;
   font-weight: 600;
   font-size: 18px;
-  background-color: #023E41;
-  color: white;
-  border: 2px solid #000;
+  background-color: var(--main-green);
+  color: var(--main-text);
+  border: 2px solid var(--main-text-dark);
   border-radius: 2px;
   transition: 0.5s;
   translate: background-color;
 }
 
 .clock:hover {
-  color: rgb(185, 253, 231);
-  background-color: #023e41cb;
+  color: var(--main-celestial);
+  background-color: var(--main-green);
 }
 
 .date-container {

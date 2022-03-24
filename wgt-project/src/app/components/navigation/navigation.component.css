@@ -121,7 +121,7 @@ NB!!!! ADD HOVER EFFECTS, BEFORE--AFTER
   align-content: space-between;
   align-items: center;
   text-decoration: none;
-  color: #000000
+  color: var(--main-text-dark);
 }
 
 
@@ -129,13 +129,13 @@ NB!!!! ADD HOVER EFFECTS, BEFORE--AFTER
 
 .divider-1 {
   height: 1px;
-  background-color: #000000;
+  background-color: var(--main-text-dark);
   width: 100%;
 }
 
 .divider {
   height: 0.25px;
-  background-color: #00000041;
+  background-color: var(--main-divider-light);
   width: 100%;
 }
 

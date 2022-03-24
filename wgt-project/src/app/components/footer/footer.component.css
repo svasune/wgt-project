@@ -31,7 +31,7 @@ app-root {
   flex-direction: column;
   align-items: baseline;
   width: 100%;
-  color: #023E41;
+  color: var(--main-green);
   cursor: pointer;
 }
 
@@ -62,21 +62,24 @@ li a {
 }
 
 .top-footer {
-  box-shadow: 1px 2px 5px #000;
+  box-shadow: 1px 2px 5px var(--main-text-dark);
+  ;
   max-width: 500px;
   margin: 15px auto;
 }
 
 .foot-t a:hover {
-  background-color: #000;
-  color: #59bec4;
+  background-color: var(--main-text-dark);
+  ;
+  color: var(--main-blue);
   ;
 }
 
 .foot-t {
   font-size: 24px;
   font-weight: 900;
-  border: 1px solid #000;
+  border: 1px solid var(--main-text-dark);
+  ;
 }
 
 .bottom-footer {
@@ -87,8 +90,8 @@ li a {
   text-align: left;
   height: 200px;
   width: 100%;
-  background-color: #000000;
-  color: #59bec4;
+  background-color: var(--main-bg-dark);
+  color: var(--main-blue);
 }
 
 .bott-top-footer,
@@ -109,11 +112,11 @@ li a {
 }
 
 i {
-  color: white;
+  color: var(--main-text);
 }
 
 img {
-  background-color: #fff;
+  background-color: var(--main-dark);
   border-radius: 5px;
 }
 
