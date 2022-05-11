@@ -62,6 +62,16 @@ const routes: Routes = [
         (module) => module.SearchBarModule
       ),
   },
+  {
+    path: 'login-component',
+    loadChildren: () =>
+      import(`./login/login.module`).then((module) => module.LoginModule),
+  },
+  {
+    path: 'signup-component',
+    loadChildren: () =>
+      import(`./signup/signup.module`).then((module) => module.SignupModule),
+  },
 ];
 
 @NgModule({

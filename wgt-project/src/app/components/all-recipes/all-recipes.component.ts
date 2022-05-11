@@ -25,15 +25,19 @@ export class AllRecipesComponent implements OnInit {
       this.recipies = recipies;
     });
   }
-  // addToFavorites() {
-  //   this.recipiesApiService.addToList().subscribe(({ recipies }: any): void => {
-  //     this.recipies = recipies;
-  //   });
-  // }
+
   public toggleSelected() {
     this.selected = !this.selected;
     this.selectedChange.emit(this.selected);
   }
+
+  // addFavorite() {
+  //   this.recipiesApiService.addToList().subscribe(({ recipies }: any): void => {
+  //     this.recipies = recipies;
+  //   });
+  // }
+
+  removeFavorite() {}
 }
 
 // add() {

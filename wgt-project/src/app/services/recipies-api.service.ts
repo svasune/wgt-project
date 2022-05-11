@@ -9,12 +9,18 @@ import { ApiService } from './api.service';
   providedIn: 'root',
 })
 export class RecipiesApiService {
+  post(arg0: string, userLog: Object) {
+    throw new Error('Method not implemented.');
+  }
+  recipies: Recipie[] = [];
+
+  constructor(private apiService: ApiService<Recipie>) {}
+
   getRecipes():
     | Observable<import('../types/types').Recipe[]>
     | Promise<import('../types/types').Recipe[]> {
     throw new Error('Method not implemented.');
   }
-  constructor(private apiService: ApiService<Recipie>) {}
 
   getAllRecipies(): Observable<Recipie[]> {
     return this.apiService.getAll(`Recipie/all`);
@@ -35,7 +41,13 @@ export class RecipiesApiService {
     return this.apiService.search(`Recipie/?name=${term}`);
   }
 
-  addToList(): Observable<Recipie[]> {
-    return this.apiService.post(`Recipie/` + `recipieId`, {});
+  updateRecipie(recipieId: number): Observable<Recipie> {
+    return this.apiService.update(`Recipie`, recipieId);
   }
+
+  // addToList(recipieId: number, recipie: any): Observable<Recipie[]> {
+  // return (
+  //   this.apiService.update(`Recipie`, recipieId), JSON.stringify(recipie)
+  // );
+  // }
 }

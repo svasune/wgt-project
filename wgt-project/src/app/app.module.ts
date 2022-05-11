@@ -43,7 +43,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
 import { DarkModeToggleComponent } from './themes/dark-mode-toggle.component';
-
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +59,8 @@ import { DarkModeToggleComponent } from './themes/dark-mode-toggle.component';
     SearchFilterPipe,
     FavoritesComponent,
     DarkModeToggleComponent,
+    LoginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,6 +85,7 @@ import { DarkModeToggleComponent } from './themes/dark-mode-toggle.component';
     Ng2SearchPipeModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxQRCodeModule,
   ],
   providers: [
     ApiService,

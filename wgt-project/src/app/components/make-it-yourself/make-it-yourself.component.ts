@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  NgxQrcodeElementTypes,
+  NgxQrcodeErrorCorrectionLevels,
+} from '@techiediaries/ngx-qrcode';
 
 @Component({
   selector: 'app-make-it-yourself',
@@ -14,6 +18,11 @@ export class MakeItYourselfComponent implements OnInit {
   // BMI counter BMI = kg/m2
   kg: number | undefined;
   m: number | undefined;
+
+  // QR code
+  elementType = NgxQrcodeElementTypes.URL;
+  correctionLevel = NgxQrcodeErrorCorrectionLevels.HIGH;
+  value = 'https://www.9gag.com/';
 
   constructor() {}
 

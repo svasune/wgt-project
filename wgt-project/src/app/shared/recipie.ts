@@ -10,6 +10,7 @@ export interface Recipie {
   imageUrl?: string;
   isVegetarian?: boolean;
   isVegan?: boolean;
+  isFavorite?: boolean;
   ingredients?: [
     {
       ingredientId: number;

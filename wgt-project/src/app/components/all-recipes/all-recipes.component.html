@@ -19,7 +19,7 @@
       <img mat-card-image src="{{ recipie.imageUrl }}" alt="Photo of a {{ recipie.name }}">
       <mat-card-actions>
         <button mat-icon-button (click)="toggleSelected()">
-          <mat-icon *ngIf="selected" aria-label="Example icon-button with a heart icon">
+          <mat-icon *ngIf="selected" addFavorite() aria-label="Example icon-button with a heart icon">
             favorite
           </mat-icon>
 
@@ -31,6 +31,10 @@
         <button mat-button routerLink="/recipie/{{recipie.recipieId}}" routerLinkActive="active">full
           recipe
         </button>
+        <!-- <button class="button" (click)="isClicked" [ngClass]="{'active': !isClicked}" (click)="addFavorite()">Add to
+          Favorite</button> -->
+        <!-- <button class="button" [ngClass]="{'active': isClicked (click)=" removeFavorite("${recipie.recipieId}")"
+          (click)="isClicked = !isClicked">Remove Favorite</button> -->
         <!-- <button *ngIf='favoriteActive' class="button" (click)="*ngIf='favoriteActive' = false; localStorage()" >Add to Favorite</button>
 <button *ngIf='!favoriteActive' class="button" (click)="favoriteActive' = true; removeLocal()" >Remove Favorite</button> -->
       </mat-card-actions>

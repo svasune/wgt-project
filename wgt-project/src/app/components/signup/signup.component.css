@@ -1,0 +1,17 @@
+.card {
+  position: relative;
+  border: none;
+  width: 300px;
+  padding: 25px;
+  top: 35px;
+  background: var(--main-background);
+  color: var(--main-text-dark);
+
+}
+
+a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: var(--main-green);
+  font-weight: 450;
+}
